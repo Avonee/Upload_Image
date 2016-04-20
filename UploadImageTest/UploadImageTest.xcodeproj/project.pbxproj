@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BEB2BD841CC7DABC00ECFA38 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB2BD831CC7DABC00ECFA38 /* LoginViewController.swift */; };
+		BEB2BD8C1CC7E4A400ECFA38 /* IntoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB2BD8B1CC7E4A400ECFA38 /* IntoViewController.swift */; };
 		BEB55E041CC765730098DB70 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB55E031CC765730098DB70 /* AppDelegate.swift */; };
 		BEB55E071CC765730098DB70 /* UploadImageTest.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BEB55E051CC765730098DB70 /* UploadImageTest.xcdatamodeld */; };
 		BEB55E091CC765730098DB70 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB55E081CC765730098DB70 /* ViewController.swift */; };
@@ -27,6 +29,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BEB2BD831CC7DABC00ECFA38 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		BEB2BD8B1CC7E4A400ECFA38 /* IntoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntoViewController.swift; sourceTree = "<group>"; };
 		BEB55DFE1CC765730098DB70 /* UploadImageTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UploadImageTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEB55E021CC765730098DB70 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BEB55E031CC765730098DB70 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -80,7 +84,9 @@
 			isa = PBXGroup;
 			children = (
 				BEB55E031CC765730098DB70 /* AppDelegate.swift */,
+				BEB2BD831CC7DABC00ECFA38 /* LoginViewController.swift */,
 				BEB55E081CC765730098DB70 /* ViewController.swift */,
+				BEB2BD8B1CC7E4A400ECFA38 /* IntoViewController.swift */,
 				BEB55E0A1CC765730098DB70 /* Main.storyboard */,
 				BEB55E0D1CC765730098DB70 /* Images.xcassets */,
 				BEB55E0F1CC765730098DB70 /* LaunchScreen.xib */,
@@ -215,6 +221,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BEB2BD8C1CC7E4A400ECFA38 /* IntoViewController.swift in Sources */,
+				BEB2BD841CC7DABC00ECFA38 /* LoginViewController.swift in Sources */,
 				BEB55E091CC765730098DB70 /* ViewController.swift in Sources */,
 				BEB55E071CC765730098DB70 /* UploadImageTest.xcdatamodeld in Sources */,
 				BEB55E041CC765730098DB70 /* AppDelegate.swift in Sources */,
