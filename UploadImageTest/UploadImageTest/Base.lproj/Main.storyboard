@@ -41,7 +41,7 @@
                                 </state>
                                 <connections>
                                     <action selector="Login:" destination="IIw-7I-exd" eventType="touchUpInside" id="eTs-Jr-lk2"/>
-                                    <segue destination="6zY-tq-gFy" kind="modal" id="WRI-nb-6Gu"/>
+                                    <segue destination="6zY-tq-gFy" kind="modal" identifier="Login_toMain" id="WRI-nb-6Gu"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Secret" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="s9b-72-IRC">
@@ -308,6 +308,6 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="JlI-ZT-6iB"/>
+        <segue reference="WRI-nb-6Gu"/>
     </inferredMetricsTieBreakers>
 </document>

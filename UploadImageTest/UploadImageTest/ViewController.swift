@@ -21,7 +21,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     @IBOutlet weak var Secret: UITextField!
     
-    
+    var userDefault:NSUserDefaults = NSUserDefaults.standardUserDefaults()
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -80,7 +80,24 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     @IBAction func Submit(sender: AnyObject) {
         
+        if (Email.text == "") || (Birthday.text == "") || (Secret.text == "") {
+            
+            var alert = UIAlertController(title: "Error", message: "未填寫完畢！", preferredStyle: UIAlertControllerStyle.Alert)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default,handler: nil))
+            self.presentViewController(alert, animated: true, completion: nil)
+            
+            
+        }else{
+        
+        self.userDefault.setObject(self.Email.text, forKey: "User_ID")
+        self.userDefault.setObject(self.Birthday.text, forKey: "User_Birthday")
+        self.userDefault.setObject(self.Secret.text, forKey: "User_Secret")
+        
+        
+        self.userDefault.synchronize()
+        
         self.performSegueWithIdentifier("toMain", sender: self)
+        }
         
     }
     override func didReceiveMemoryWarning() {
@@ -91,7 +108,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "toMain"{
             let vc = segue.destinationViewController as! IntoViewController
-                vc.nameLabeltext = Email.text
+//                vc.nameLabeltext = Email.text
                 vc.BigHeadimage = photo.image
         }
     }
