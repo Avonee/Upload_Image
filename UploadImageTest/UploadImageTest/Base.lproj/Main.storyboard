@@ -130,10 +130,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gqh-aH-isX">
-                                <rect key="frame" x="16" y="28" width="82" height="87"/>
+                                <rect key="frame" x="16" y="28" width="82" height="82"/>
                                 <animations/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="gqh-aH-isX" secondAttribute="height" multiplier="82:87" id="GTH-aQ-lGl"/>
+                                    <constraint firstAttribute="width" secondItem="gqh-aH-isX" secondAttribute="height" multiplier="82:87" constant="4.71264367816093" id="GTH-aQ-lGl"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4cw-Kl-QkN">
@@ -147,10 +147,10 @@
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="4cw-Kl-QkN" firstAttribute="width" secondItem="gqh-aH-isX" secondAttribute="height" multiplier="190:87" id="2L1-63-Suz"/>
+                            <constraint firstItem="4cw-Kl-QkN" firstAttribute="width" secondItem="gqh-aH-isX" secondAttribute="height" multiplier="190:87" constant="10.91954022988503" id="2L1-63-Suz"/>
                             <constraint firstItem="gqh-aH-isX" firstAttribute="leading" secondItem="0qS-K7-KjZ" secondAttribute="leadingMargin" id="3qL-0r-tKK"/>
                             <constraint firstAttribute="trailingMargin" secondItem="4cw-Kl-QkN" secondAttribute="trailing" constant="8" id="Ynh-lP-6DQ"/>
-                            <constraint firstItem="4cw-Kl-QkN" firstAttribute="centerY" secondItem="gqh-aH-isX" secondAttribute="centerY" id="Z96-El-u3c"/>
+                            <constraint firstItem="4cw-Kl-QkN" firstAttribute="centerY" secondItem="gqh-aH-isX" secondAttribute="centerY" constant="2.5" id="Z96-El-u3c"/>
                             <constraint firstItem="gqh-aH-isX" firstAttribute="top" secondItem="Xh5-av-fTL" secondAttribute="bottom" constant="8" id="ZwM-aF-MDc"/>
                             <constraint firstItem="4cw-Kl-QkN" firstAttribute="top" secondItem="Xh5-av-fTL" secondAttribute="bottom" constant="41" id="r4A-4c-yPq"/>
                             <constraint firstItem="4cw-Kl-QkN" firstAttribute="leading" secondItem="gqh-aH-isX" secondAttribute="trailing" constant="8" id="xkJ-fE-4uF"/>

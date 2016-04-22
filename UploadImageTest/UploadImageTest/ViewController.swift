@@ -8,6 +8,19 @@
 
 import UIKit
 
+
+func getDocumentsURL() -> NSURL {
+    let documentsURL: AnyObject = NSFileManager.defaultManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask)[0]
+    return documentsURL as! NSURL
+}
+
+func fileInDocumentsDirectory(filename: String) -> String {
+    
+    let fileURL = getDocumentsURL().URLByAppendingPathComponent(filename)
+    return fileURL.path!
+    
+}
+
 class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate,UITextFieldDelegate {
 
     @IBOutlet weak var photo: UIImageView!
@@ -95,6 +108,19 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         
         
         self.userDefault.synchronize()
+            
+            //////
+            // Define the specific path, image name
+            let myImageName = "sample.jpg"
+            let imagePath = fileInDocumentsDirectory(myImageName)
+            
+            if let image = photo.image {
+                saveImage(image, path: imagePath)
+            } else { print("some error message") }
+            
+            
+            
+            //////
         
         self.performSegueWithIdentifier("toMain", sender: self)
         }
@@ -105,11 +131,24 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         // Dispose of any resources that can be recreated.
     }
     
+    
+    func saveImage (image: UIImage, path: String ) -> Bool{
+        
+        // let pngImageData = UIImagePNGRepresentation(image)
+        let jpgImageData = UIImageJPEGRepresentation(image, 1.0)   // if you want to save as JPEG
+        let result = jpgImageData!.writeToFile(path, atomically: true)
+        
+        return result
+        
+    }
+    
+    
+    
    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "toMain"{
             let vc = segue.destinationViewController as! IntoViewController
 //                vc.nameLabeltext = Email.text
-                vc.BigHeadimage = photo.image
+//                vc.BigHeadimage = photo.image
         }
     }
 
